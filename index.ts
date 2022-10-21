@@ -1,6 +1,7 @@
 //  declaratio: let 'variable name' : 'type' = 'value';
 
 let x: number = 12;
+let z: number = 15;
 
 let y: string = 'Marcel';
 
@@ -16,6 +17,7 @@ const addition = (n1: validType, n2: validType) => {
         console.log("Error not a number");
     }
 }
+console.log(addition(x, z));
 //interface creates placceholders
 interface Inventory {
     shape: string,

@@ -56,4 +56,11 @@ const countLetters = (str) => {
     return result;
 };
 console.log(countLetters("tree"));
+function lettCount(str) {
+    return str.split("").reduce((total, letter) => {
+        total[letter] ? total[letter]++ : (total[letter] = 1);
+        return total;
+    }, {});
+}
+console.log(lettCount("hallo"));
 //# sourceMappingURL=index.js.map

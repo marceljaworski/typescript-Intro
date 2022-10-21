@@ -1,7 +1,7 @@
 //  declaratio: let 'variable name' : 'type' = 'value';
 
 let x: number = 12;
-let z: number = 15;
+let z: number = 12;
 
 let y: string = 'Marcel';
 
@@ -39,6 +39,32 @@ interface DciStudsInterface {
     isTeacher: boolean,
 }
     
+interface arr{
+    tile: string,
+    score: number,
 
+}
+const scrabbleHand:arr[]=[
+    {tile: "N", score: 1},
+    {tile: "K", score: 5},
+    {tile: "Z", score: 10},
+    {tile: "X", score: 8},
+    {tile: "D", score: 1},
+    {tile: "A", score: 1},
+    {tile: "E", score: 1},
+]
+const calcMaxScrabbleScore = (tiles: arr[])=>{
+    let sum: number = 0;
+    tiles.forEach((el:any)=>{
+        sum+= el.score;
+    });
+    return sum;
 
-    
+} 
+console.log(calcMaxScrabbleScore(scrabbleHand));
+
+const isEmptyObject =(obj:object)=>{
+    return Object.keys(obj).length===0;
+}
+console.log(isEmptyObject({}));
+console.log(isEmptyObject({ a: 1}));

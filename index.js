@@ -42,4 +42,18 @@ const isEmptyObject = (obj) => {
 };
 console.log(isEmptyObject({}));
 console.log(isEmptyObject({ a: 1 }));
+const countLetters = (str) => {
+    const splited = str.split("");
+    let result = {};
+    for (let i = 0; i < splited.length; i++) {
+        if (result.hasOwnProperty(splited[i])) {
+            result[splited[i]]++;
+        }
+        else {
+            result[splited[i]] = 1;
+        }
+    }
+    return result;
+};
+console.log(countLetters("tree"));
 //# sourceMappingURL=index.js.map

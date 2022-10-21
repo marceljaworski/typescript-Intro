@@ -68,3 +68,18 @@ const isEmptyObject =(obj:object)=>{
 }
 console.log(isEmptyObject({}));
 console.log(isEmptyObject({ a: 1}));
+
+const countLetters= ( str: string ) => {
+    const splited: Array<string> = str.split("");
+    let result: object ={};
+    for (let i=0; i<splited.length; i++){
+        if (result.hasOwnProperty(splited[i])){
+            result[splited[i]]++;
+
+        }else{
+            result[splited[i]] = 1;
+        }
+    }
+    return result;
+};
+console.log(countLetters("tree"));
